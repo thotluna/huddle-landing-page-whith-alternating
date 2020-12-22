@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5,h6 {
+    font-family: $head-fonts;
+    font-weight: bold;
+}
+
+p {
+    font-family: $body-fonts;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding: 2rem;
+}
+
+.grid {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 2fr;
+    grid-template-areas: "imagen" "text";
+    gap: 2em;
+    @media screen and (min-width: $tablet) {
+        grid-template-columns: repeat(2 1fr);
+    }
+
+    .text {
+        grid-area: text;
+        align-items: center;
+        justify-content: center;
+        @media screen and (min-width: $tablet) {
+        align-items: flex-end;
+        }
+    }
+
+    .image {
+        grid-area: imagen;
+        align-self: center;
+        object-fit: cover;
+        img {
+           width: 100%;
+           min-width: 311px;
+           max-width: 600px;
+           height: auto; 
+        }
+    }
+}
+.grid-special {
+    grid-template-areas: "text" "imagen";
+}
+
+.grid-normal {
+    display: grid;
+    @media screen and (min-width: $tablet) {
+        grid-template-areas: "text imagen";
+        text-align: start;
+        .image {
+            justify-self: flex-end;
+        }
+        .text {
+            align-self: center;
+            justify-self: flex-end;
+            
+        }     
+
+    }
+}
+
+.grid-reverse {
+    @media screen and (min-width: $tablet) {
+        grid-template-areas: "imagen text";
+        text-align: start;
+        .image {
+            justify-self: flex-end;
+        }
+        .text {
+            align-self: center;
+            justify-self: flex-end;
+            
+        }  
+    }
+}
+
+

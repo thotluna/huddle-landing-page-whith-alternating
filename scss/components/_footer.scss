@@ -1,0 +1,109 @@
+.footer {
+    background-color: $very-dark-cyan;
+    color: white;
+    padding: 12em 2em 2em;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 8em;
+    row-gap: 2em;
+    // align-items: flex-start;
+    @media (min-width: $desktop) {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 12em 4em 4em;
+    }
+
+    .about__logo {
+        @media (min-width: $desktop) {
+            grid-column: 1/4;
+        }
+    }
+
+    .about {
+        font-size: 1.3em;
+        line-height: 1.5;
+        display: grid;
+        grid-template-columns: repeat( 2 auto);
+        column-gap: 2em;
+        row-gap: 1.5em;
+        align-items: start;
+        grid-template-areas: 
+        "img-location location"
+        "img-phone phone"
+        "img-email e-mail"
+        ;
+        @media(min-width: $desktop) {
+            font-size: 1em;
+        }
+        
+
+        & > img{
+            height: 24px;
+            width: auto;
+        }
+    }
+
+    .links{
+        text-decoration: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        @media screen and (min-width: $tablet) {
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+        }
+
+        & > a {
+            display: block;
+            font-family: $body-fonts;
+            text-decoration: none;
+            color: white;
+            font-size: 1.4em;
+            line-height: 2.5;
+            @media(min-width: $desktop) {
+                font-size: 1.1em; 
+            }
+        }
+    }
+
+    .social {
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .copy p {
+            text-align: center;
+        }
+
+        .icon{
+            margin: auto .5em;
+            width: 48px;
+            height: 48px;
+            padding: .5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid white;
+            border-radius: 50%;
+            &>a {
+                color: white;
+                text-decoration: none;
+
+                
+            }
+            &:hover{
+                border: 1px solid $pink;
+                &>a {
+                    color: $pink;  
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,59 @@
+.btn {
+    display: inline;
+    line-height: normal;
+    font-family: $head-fonts;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    touch-action: manipulation;
+    outline: none;
+    user-select: none;
+    padding: 1em 6em;
+    border-radius: 2em;
+    &:disabled {
+        cursor: not-allowed;
+    }
+    @media(min-width: $tablet){
+        font-size: 0.8em;
+        padding: 1em 3em;
+    }
+    @media(min-width: $desktop){
+        font-size: 1em;
+        padding: 1em 6em;
+    }
+}
+
+
+
+.btn-pink {
+    background-color: $pink;
+    box-shadow: 0 0.125em 0.9375em $grayish-blue;
+    color: white;
+    &:hover {
+        // background-color: $pink_lite;
+        box-shadow: 0 0.50em 1em $grayish-blue;
+    }
+    &:active {
+        background-color: $pink_dark;
+        box-shadow: 0 0.1em 0.5em $grayish-blue;
+    }
+}
+
+.btn-white {
+    background-color: white;
+    box-shadow: 0 0.125em 0.9375em $grayish-blue;
+    color: $very-dark-cyan;
+    &:hover {
+        box-shadow: 0 0.50em 1em $grayish-blue;
+    }
+    &:active {
+        // background-color: $pink_dark;
+        box-shadow: 0 0.1em 0.5em $grayish-blue;
+    }
+}
+
+.btn-small {
+    padding: 0.5em 2em;
+    border-radius: 2em;
+    
+}
